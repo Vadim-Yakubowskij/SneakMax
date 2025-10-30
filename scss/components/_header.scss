@@ -1,0 +1,110 @@
+.header {
+  background-color: $color-primary;
+  color: $text-color-primary;
+
+  &__top {
+    padding: $spacing-md 0;
+    border-bottom: 1px solid rgba($color-white, 0.1);
+  }
+
+  &__top-content {
+    @include center-flex;
+    justify-content: space-between;
+    height: 44px;
+
+    @include mobile {
+      height: auto;
+      flex-wrap: wrap;
+      gap: $spacing-sm;
+    }
+  }
+
+  &__logo {
+    font-family: $font-family-primary;
+    font-weight: 700;
+    font-size: $font-size-xl;
+    line-height: 100%;
+    color: $text-color-primary;
+  }
+
+  &__nav {
+    display: flex;
+    gap: $spacing-lg;
+
+    @include mobile {
+      order: 3;
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: $spacing-sm;
+    }
+  }
+
+  &__nav-link {
+    color: $text-color-primary;
+    font-size: $font-size-sm;
+    line-height: 1.4;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__main {
+    position: relative;
+    padding: $spacing-xl 0;
+    overflow: hidden;
+  }
+
+  &__hero {
+    position: relative;
+    @include center-flex;
+    min-height: 400px;
+    flex-direction: column;
+  }
+
+  &__bg-text {
+    position: absolute;
+    font-size: $font-size-hero;
+    color: rgba($text-color-primary, 0.12);
+    font-weight: 700;
+    line-height: 100%;
+    z-index: 1;
+    user-select: none;
+
+    @include mobile {
+      font-size: 120px;
+    }
+  }
+
+  &__info {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: $spacing-md;
+  }
+
+  &__info--primaryText {
+    display: block;
+    font-size: $font-size-xxl;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: $spacing-md;
+
+    @include mobile {
+      font-size: 28px;
+    }
+  }
+
+  &__info--secondText {
+    display: block;
+    font-size: $font-size-lg;
+    line-height: 1.5;
+    opacity: 0.9;
+
+    @include mobile {
+      font-size: $font-size-base;
+    }
+  }
+}

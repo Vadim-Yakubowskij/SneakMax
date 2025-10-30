@@ -1,0 +1,40 @@
+.cart-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  color: $text-color-primary;
+  padding: $spacing-xs $spacing-sm;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: rgba($color-white, 0.1);
+  }
+
+  &__text {
+    font-size: $font-size-sm;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: $color-accent;
+    color: $color-white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    @include center-flex;
+    font-weight: bold;
+  }
+}
