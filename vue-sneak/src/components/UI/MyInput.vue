@@ -1,12 +1,12 @@
-<template>
- <input class="input" type="text">
-</template>
-
 <script>
 export default {
   name: 'my-input'
 }
 </script>
+
+<template>
+ <input class="input" type="text">
+</template>
 
 <style scoped>
 .input{
